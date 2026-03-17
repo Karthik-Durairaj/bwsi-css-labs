@@ -37,18 +37,16 @@ def sanitize_input(operation: str) -> float:
 def main():
     
     print(f"===== Simple Calculator =====")
-    while True:
-        # Ask the user for sample input    
-        num1 = sanitize_input("Enter the first number: ")
-        num2 = sanitize_input("Enter the second number: ")
-        operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+    # Ask the user for sample input    
+    num1 = sanitize_input("Enter the first number: ")
+    num2 = sanitize_input("Enter the second number: ")
+    operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
 
-        # Perform the calculation and display the result
-        result = simple_calculator(operation, num1, num2)
+    # Perform the calculation and display the result
+    result = simple_calculator(operation, num1, num2)
 
-        if(result != -1):
-            print(f"The result of {operation}ing {num1} and {num2} is: {result}")
-            break
+    if(result != -1):
+        print(f"The result of {operation}ing {num1} and {num2} is: {result}")
     
 if __name__ == "__main__":
     main()
