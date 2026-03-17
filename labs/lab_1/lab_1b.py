@@ -9,7 +9,7 @@ and prints the result to the terminal window.
 
 """
 
-def simple_calc(operation: str, num1: float, num2: float) -> float:
+def simple_calculator(operation: str, num1: float, num2: float) -> float:
     if operation == "add":
         return (num1 + num2)
     elif operation == "subtract":
@@ -44,7 +44,7 @@ def main():
         operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
 
         # Perform the calculation and display the result
-        result = simple_calc(operation, num1, num2)
+        result = simple_calculator(operation, num1, num2)
 
         if(result != -1):
             print(f"The result of {operation}ing {num1} and {num2} is: {result}")
